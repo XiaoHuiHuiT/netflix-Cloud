@@ -1,0 +1,20 @@
+package com.bntang666;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author ：BNTang
+ * @version ：V1.0
+ * @program ：springcloud-netflix
+ * @date ：Created in 2020/8/10 15:53
+ * @description ：Goods模块启动器
+ */
+@SpringBootApplication
+public class GoodsApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(GoodsApplication.class, args);
+    }
+
+}
