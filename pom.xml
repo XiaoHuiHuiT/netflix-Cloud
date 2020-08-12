@@ -12,6 +12,7 @@
         <module>user</module>
         <module>goods</module>
         <module>goods-cluster-01</module>
+        <module>Eureka</module>
     </modules>
 
     <!--SpringBoot依赖 2.2.3.RELEASE-->
