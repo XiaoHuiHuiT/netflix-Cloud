@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * @date ：Created in 2020/8/10 13:04
  * @description ：配置类
  */
-@ComponentScan("com")
 @Configuration
 public class GoodsCluster01AppConfig {
 

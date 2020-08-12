@@ -13,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
  * @date ：Created in 2020/8/10 13:04
  * @description ：配置类
  */
-@ComponentScan("com")
 @Configuration
 public class UserAppConfig {
 
@@ -25,7 +24,7 @@ public class UserAppConfig {
     @Bean
     public TomcatServletWebServerFactory tomcat() {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-        tomcat.setPort(5000);
+        tomcat.setPort(6000);
         return tomcat;
     }
 
