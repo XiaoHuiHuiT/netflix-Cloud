@@ -2,7 +2,7 @@ eureka:
   client:
     serviceUrl:
       # eureka服务端提供的注册地址 参考服务端配置的这个路径
-      defaultZone: http://localhost:3000/eureka
+      defaultZone: http://eureka:3000/eureka,http://eureka1:3001/eureka,http://eureka2:3002/eureka
   instance:
     # 此实例注册到eureka服务端的唯一的实例ID
     instance-id: goods-2
