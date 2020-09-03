@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import javax.xml.ws.Response;
 import java.util.HashMap;
 
 /**
@@ -22,9 +21,16 @@ public class UserController {
     @Autowired
     public RestTemplate restTemplate;
 
+//    @RequestMapping("/getGoods.do")
+//    public ResponseResult getGoods() {
+//        return ResponseResult.success("调用Goods服务成功", restTemplate.getForObject("http://localhost:80/getGoods.do", Object.class));
+//    }
+
+    private static final String GOODS_URL = "http://client-goods";
+
     @RequestMapping("/getGoods.do")
     public ResponseResult getGoods() {
-        return ResponseResult.success("调用Goods服务成功", restTemplate.getForObject("http://localhost:80/getGoods.do", Object.class));
+        return ResponseResult.success("调用Goods服务成功", restTemplate.getForObject(GOODS_URL + "/getGoods.do", Object.class));
     }
 
     @RequestMapping("/getUser.do")

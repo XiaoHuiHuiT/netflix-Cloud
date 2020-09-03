@@ -1,6 +1,7 @@
 package com.bntang666.config;
 
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -16,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 public class UserAppConfig {
 
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
@@ -23,7 +25,7 @@ public class UserAppConfig {
     @Bean
     public TomcatServletWebServerFactory tomcat() {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-        tomcat.setPort(6000);
+        tomcat.setPort(4000);
         return tomcat;
     }
 

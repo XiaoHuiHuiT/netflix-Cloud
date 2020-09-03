@@ -1,5 +1,5 @@
 server:
-  port: 3005
+  port: 3001
 
 eureka:
   server:
@@ -17,7 +17,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       #微服务要注册到的地址
-      defaultZone: http://eureka:3003/eureka,http://eureka2:3002/eureka
+      defaultZone: http://eureka:3000/eureka,http://eureka2:3002/eureka
 
 spring:
   application:
