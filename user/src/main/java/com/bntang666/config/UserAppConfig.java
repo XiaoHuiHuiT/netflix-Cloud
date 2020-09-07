@@ -1,5 +1,8 @@
 package com.bntang666.config;
 
+import com.bntang666.config.irule.MyIRule;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +21,7 @@ public class UserAppConfig {
 
     @Bean
     @LoadBalanced
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
@@ -29,4 +32,8 @@ public class UserAppConfig {
         return tomcat;
     }
 
+    @Bean
+    public IRule iRule() {
+        return new MyIRule();
+    }
 }
