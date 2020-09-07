@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableEurekaClient
 @SpringBootApplication
@@ -14,6 +15,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClients;
         @RibbonClient(name = "CLIENT-GOODS", configuration = GoodsConfig.class),
         @RibbonClient(name = "SERVER-ORDER", configuration = OrderConfig.class)
 })
+@EnableFeignClients
 public class UserApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);

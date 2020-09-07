@@ -1,5 +1,6 @@
 package com.bntang666.controller;
 
+import com.bntang666.service.GoodsFeignClient;
 import com.bntang666.util.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +29,12 @@ public class UserController {
 
     private static final String GOODS_URL = "http://client-goods";
 
+    @Autowired
+    private GoodsFeignClient goodsFeignClient;
+
     @RequestMapping("/getGoods.do")
     public ResponseResult getGoods() {
-        return ResponseResult.success("调用Goods服务成功", restTemplate.getForObject(GOODS_URL + "/getGoods.do", Object.class));
+        return ResponseResult.success("调用Goods服务成功", goodsFeignClient.getGoods());
     }
 
     @RequestMapping("/getUser.do")

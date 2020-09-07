@@ -18,7 +18,6 @@ public class GoodsController {
 
     @RequestMapping("/getGoods.do")
     public ResponseResult getGoods() {
-
         HashMap<Object, Object> map = new HashMap<>();
         map.put("name", "BNTangGoods");
         return ResponseResult.success("获取成功", map);
