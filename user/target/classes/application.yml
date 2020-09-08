@@ -34,3 +34,8 @@ hystrix:
         requestVolumeThreshold: 5
         # 默认是 5 秒,5秒后尝试再访问一次服务器
         sleepWindowInMilliseconds: 5000
+
+feign:
+  hystrix:
+    # 开启 Feign当中的 Hystrix
+    enabled: true

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date Created in 2020/9/7 19:57
  * @description
  **/
-@FeignClient(name = "client-goods")
+@FeignClient(name = "client-goods", fallbackFactory = GoodsFeignFallBackFactory.class)
 public interface GoodsFeignClient {
     @RequestMapping("/getGoods.do")
     ResponseResult getGoods();
