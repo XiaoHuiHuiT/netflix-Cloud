@@ -2,6 +2,7 @@ package com.bntang666.config;
 
 import com.bntang666.config.irule.MyIRule;
 import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,7 +18,7 @@ public class GoodsConfig {
 
 @Bean
 public IRule iRule() {
-    return new MyIRule();
+    return new RandomRule();
 }
 
 }

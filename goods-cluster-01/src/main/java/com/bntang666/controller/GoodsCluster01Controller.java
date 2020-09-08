@@ -18,9 +18,15 @@ public class GoodsCluster01Controller {
 
     @RequestMapping("/getGoods.do")
     public ResponseResult getGoods() {
-
         HashMap<Object, Object> map = new HashMap<>();
         map.put("name", "BNTangGoods-Cluster-01");
+
+        try {
+            Thread.sleep(10 * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         return ResponseResult.success("获取成功", map);
     }
 

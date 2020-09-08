@@ -26,13 +26,6 @@ public class UserAppConfig {
     }
 
     @Bean
-    public TomcatServletWebServerFactory tomcat() {
-        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-        tomcat.setPort(4000);
-        return tomcat;
-    }
-
-    @Bean
     public IRule iRule() {
         return new MyIRule();
     }
