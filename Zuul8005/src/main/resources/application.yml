@@ -16,7 +16,7 @@ eureka:
 spring:
   application:
     # 此实例注册到eureka服务端的name
-    name: client-zuul
+    name: zuul-server
 server:
   port: 8005
 
