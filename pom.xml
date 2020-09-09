@@ -17,6 +17,7 @@
         <module>Eureka3002</module>
         <module>order</module>
         <module>order1</module>
+        <module>zuul</module>
     </modules>
 
     <!--SpringBoot依赖 2.2.3.RELEASE-->
