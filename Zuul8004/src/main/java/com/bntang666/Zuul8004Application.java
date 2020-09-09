@@ -2,7 +2,6 @@ package com.bntang666;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
@@ -14,8 +13,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  **/
 @SpringBootApplication
 @EnableZuulProxy
-public class ZuulApplication {
+public class Zuul8004Application {
     public static void main(String[] args) {
-        SpringApplication.run(ZuulApplication.class, args);
+        SpringApplication.run(Zuul8004Application.class, args);
     }
 }

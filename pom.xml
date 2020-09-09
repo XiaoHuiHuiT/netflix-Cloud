@@ -18,6 +18,8 @@
         <module>order</module>
         <module>order1</module>
         <module>zuul</module>
+        <module>Zuul8004</module>
+        <module>Zuul8005</module>
     </modules>
 
     <!--SpringBoot依赖 2.2.3.RELEASE-->
